@@ -1,3 +1,9 @@
+/*
+* Main
+* Version 1.2
+* Lukin Ivan
+ */
+
 package HomeWork.Modul_2.Task_1;
 
 public class Main {
@@ -7,28 +13,15 @@ public class Main {
 
         MyMath math = new MyMath();
 
-        double sumD = 0;
-        double minD = 0;
-        double maxD = 0;
-        double maxPositiveD = 0;
-        double multiplicationD = 1;
-        double secondD = 0;
+        System.out.println("sum: " + math.sumInt(arrI) + ", " + "minI: " + math.minInt(arrI)
+                + ", " + "maxI; " + math.maxInt(arrI) + ", " + "maxPosI: " + math.maxPositiveI(arrI)
+                + ", " + "multiI: " + math.multiplicationI(arrI) + ", " + "secondI: " + math.secondLargest(arrI)
+                + ", " + "modulFirst: " + math.modul(arrI, "first") + ", " + "modulLaast: " + math.modul(arrI, "last"));
 
-        for (int i = 0; i < arrD.length; i++) {
-            sumD += arrD[i];
-            multiplicationD *= arrI[i];
-            if (minD > arrD[i]) minD = arrD[i];
-            if (maxD < arrD[i]) maxD = arrD[i];
-            if (maxPositiveD < arrD[i] && secondD < arrD[i]) maxPositiveD = arrD[i];
-            if (arrD[i] < maxPositiveD) secondD = arrD[i];
-        }
-
-        for (int i = 0; i < arrD.length; i++) {
-            if (secondD < arrD[i] && arrD[i] != maxPositiveD) secondD = arrD[i];
-        }
-
-        System.out.println("sum: " + math.sumInt(arrI) + ", " + "minI: " + math.minInt(arrI) + ", " + "maxI; " + math.maxInt(arrI) + ", " + "maxPosI: " + math.maxPositiveI(arrI) + ", " + "multiI: " + math.multiplicationI(arrI) + ", " + "secondI: " + math.secondLargest(arrI) + ", " + "modulFirst: " + math.modul(arrI,"first") + ", " + "modulLaast: " + math.modul(arrI,"last"));
-        System.out.println("sumD: " + math.sumDoub(arrD) + ", " + "minD: " + math.minDoub(arrD) + ", " + "maxD; " + math.maxDoub(arrD) + ", " + "maxPosD: " + math.maxPositiveD(arrD) + ", " + "multiD: " + math.multiplicationD(arrD) + ", " + "secondD: " + math.secondLargestD(arrD) + ", " + "modulFirst: " + math.modulD(arrD,"first") + ", " + "modulLaast: " + math.modulD(arrD, "last"));
+        System.out.println("sumD: " + math.sumDoub(arrD) + ", " + "minD: " + math.minDoub(arrD)
+                + ", " + "maxD; " + math.maxDoub(arrD) + ", " + "maxPosD: " + math.maxPositiveD(arrD)
+                + ", " + "multiD: " + math.multiplicationD(arrD) + ", " + "secondD: " + math.secondLargestD(arrD)
+                + ", " + "modulFirst: " + math.modulD(arrD, "first") + ", " + "modulLaast: " + math.modulD(arrD, "last"));
 
     }
 }

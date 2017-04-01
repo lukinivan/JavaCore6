@@ -1,44 +1,50 @@
+/*
+* MyMath
+* Version 1.2
+* Lukin Ivan
+ */
+
 package HomeWork.Modul_2.Task_1;
 
-public class MyMath {
+class MyMath {
 
 
-    public MyMath() {
+    MyMath() {
     }
 
     int sumInt(int arr[]) {
         int _arr = 0;
-        for (int i = 0; i < arr.length; i++) _arr += arr[i];
+        for (int anArr : arr) _arr += anArr;
         return _arr;
     }
 
     int minInt(int arr[]) {
         int _min = 0;
-        for (int i = 0; i < arr.length; i++) if (_min > arr[i]) _min = arr[i];
+        for (int anArr : arr) if (_min > anArr) _min = anArr;
         return 0;
     }
 
     int maxInt(int arr[]) {
         int _max = 0;
-        for (int i = 0; i < arr.length; i++) if (_max < arr[i]) _max = arr[i];
+        for (int anArr : arr) if (_max < anArr) _max = anArr;
         return _max;
     }
 
     int maxPositiveI(int arr[]) {
         int _maxPos = 0;
-        for (int i = 0; i < arr.length; i++) if (_maxPos < arr[i]) _maxPos = arr[i];
+        for (int anArr : arr) if (_maxPos < anArr) _maxPos = anArr;
         return _maxPos;
     }
 
     int secondLargest(int arr[]) {
         int _second = 0;
-        for (int i = 0; i < arr.length; i++) if (_second < arr[i] && arr[i] != maxPositiveI(arr)) _second = arr[i];
+        for (int anArr : arr) if (_second < anArr && anArr != maxPositiveI(arr)) _second = anArr;
         return _second;
     }
 
     int multiplicationI(int arr[]) {
         int _mult = 1;
-        for (int i = 0; i < arr.length; i++) _mult *= arr[i];
+        for (int anArr : arr) _mult *= anArr;
         return _mult;
     }
 
@@ -51,37 +57,37 @@ public class MyMath {
 
     double sumDoub(double arr[]) {
         double _arr = 0;
-        for (int i = 0; i < arr.length; i++) _arr += arr[i];
+        for (double anArr : arr) _arr += anArr;
         return _arr;
     }
 
     double minDoub(double arr[]) {
         double _min = 0;
-        for (int i = 0; i < arr.length; i++) if (_min > arr[i]) _min = arr[i];
+        for (double anArr : arr) if (_min > anArr) _min = anArr;
         return _min;
     }
 
     double maxDoub(double arr[]) {
         double _max = 0;
-        for (int i = 0; i < arr.length; i++) if (_max < arr[i]) _max = arr[i];
+        for (double anArr : arr) if (_max < anArr) _max = anArr;
         return _max;
     }
 
-    double maxPositiveD (double arr[]) {
+    double maxPositiveD(double arr[]) {
         double _maxPos = 0;
-        for (int i = 0; i < arr.length; i++) if (_maxPos < arr[i]) _maxPos = arr[i];
+        for (double anArr : arr) if (_maxPos < anArr) _maxPos = anArr;
         return _maxPos;
     }
 
     double secondLargestD(double arr[]) {
         double _second = 0;
-        for (int i = 0; i < arr.length; i++) if (_second < arr[i] && arr[i] != maxPositiveD(arr)) _second = arr[i];
+        for (double anArr : arr) if (_second < anArr && anArr != maxPositiveD(arr)) _second = anArr;
         return _second;
     }
 
     double multiplicationD(double arr[]) {
         double _mult = 1;
-        for (int i = 0; i < arr.length; i++) _mult *= arr[i];
+        for (double anArr : arr) _mult *= anArr;
         return _mult;
     }
 
