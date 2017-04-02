@@ -1,12 +1,12 @@
 /*
 * Bank
-* Version 1.2
+* Task 2.1
 * Lukin Ivan
  */
 
 package HomeWork.Modul_2.Task_2;
 
-public class Bank {
+class Bank {
     private double balance;
 
     Bank(int balance) {
