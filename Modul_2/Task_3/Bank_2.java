@@ -1,5 +1,5 @@
 /*
-* Main
+* Bank_2
 * Task 3.1
 * Lukin Ivan
  */
