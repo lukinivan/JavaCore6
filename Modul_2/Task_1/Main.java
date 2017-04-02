@@ -21,6 +21,5 @@ public class Main {
                 + "multiD: " + math.multiplicationD(arrD) + ", " + "secondD: " + math.secondLargestD(arrD) + ", "
                 + "modulFirst: " + math.modulD(arrD, "first") + ", "
                 + "modulLast: " + math.modulD(arrD, "last"));
-
     }
 }
