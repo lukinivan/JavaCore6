@@ -1,5 +1,6 @@
 package HomeWork.module4.task1;
-import java.util.Currency;
+
+import HomeWork.module4.task2.Currency;
 
 /*
 * ChinaBank
@@ -14,22 +15,50 @@ public class ChinaBank extends Bank {
     }
 
     @Override
-    int getLimitOfWithdrawal() {
+    public int getLimitOfWithdrawal() {
+        if(getCurrency() == Currency.USD) {
+            return 100;
+        }
+        if(getCurrency() == Currency.EUR) {
+            return 150;
+        }
         return 0;
     }
 
     @Override
-    int getLimitOfFunding() {
+    public int getLimitOfFunding() {
+        if(getCurrency() == Currency.USD) {
+            return 5000;
+        }
+        if(getCurrency() == Currency.EUR) {
+            return 10000;
+        }
         return 0;
     }
 
     @Override
-    int getMonthlyRate() {
+    public int getMonthlyRate() {
         return 0;
     }
 
     @Override
-    int getCommission(int summ) {
+    public int getCommission(int summ) {
+        if(getCurrency() == Currency.USD) {
+            if(summ < 1000 && summ > 0){
+                return (int)(summ * 0.03);
+            }
+            if(summ > 1000 && summ > 0) {
+                return (int) (summ * 0.05);
+            }
+        }
+        if(getCurrency() == Currency.EUR) {
+            if(summ < 1000 && summ > 0){
+                return (int)(summ * 0.1);
+            }
+            if(summ > 1000 && summ > 0) {
+                return (int) (summ * 0.11);
+            }
+        }
         return 0;
     }
 }

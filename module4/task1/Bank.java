@@ -28,10 +28,10 @@ public abstract class Bank {
         this.totalCapital = totalCapital;
     }
 
-    abstract int getLimitOfWithdrawal();
-    abstract int getLimitOfFunding();
-    abstract int getMonthlyRate();
-    abstract int getCommission(int summ);
+    public abstract int getLimitOfWithdrawal();
+    public abstract int getLimitOfFunding();
+    public abstract int getMonthlyRate();
+    public abstract int getCommission(int summ);
     double moneyPaidMonthlyForSalary(){
         return 0;
     }
@@ -52,7 +52,7 @@ public abstract class Bank {
         this.bankCountry = bankCountry;
     }
 
-    public Currency getCurrency() {
+    Currency getCurrency() {
         return currency;
     }
 
