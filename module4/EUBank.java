@@ -7,8 +7,8 @@ package HomeWork.module4;
  */
 
 public class EUBank extends Bank {
-    public EUBank(long id, String bankCountry, Currency currency, int numberOfEmployees,
-                  double avrSalaryOfEmployee, long rating, long totalCapital) {
+    EUBank(long id, String bankCountry, Currency currency, int numberOfEmployees,
+           double avrSalaryOfEmployee, long rating, long totalCapital) {
         super(id, bankCountry, currency, numberOfEmployees, avrSalaryOfEmployee, rating, totalCapital);
     }
 
