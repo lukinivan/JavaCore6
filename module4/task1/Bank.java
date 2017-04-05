@@ -1,11 +1,12 @@
-package HomeWork.module4.task1;
-import java.util.Currency;
-
 /*
 * Bank
 * module 4, task 1.1
 * Lukin Ivan
  */
+
+package HomeWork.module4.task1;
+//import java.util.Currency;
+import HomeWork.module4.task2.Currency;
 
 public abstract class Bank {
     private long id;
