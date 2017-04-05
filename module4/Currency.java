@@ -4,7 +4,7 @@
 * Lukin Ivan
  */
 
-package HomeWork.module4.task2;
+package HomeWork.module4;
 
 public enum Currency {
     USD,

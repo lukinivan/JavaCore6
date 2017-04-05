@@ -1,15 +1,13 @@
-package HomeWork.module4.task1;
-
-import HomeWork.module4.task2.Currency;
+package HomeWork.module4;
 
 /*
-* EUBank
+* USBank
 * module 4, task 1.1
 * Lukin Ivan
  */
 
-public class EUBank extends Bank {
-    public EUBank(long id, String bankCountry, Currency currency, int numberOfEmployees,
+public class USBank extends Bank {
+    public USBank(long id, String bankCountry, Currency currency, int numberOfEmployees,
                   double avrSalaryOfEmployee, long rating, long totalCapital) {
         super(id, bankCountry, currency, numberOfEmployees, avrSalaryOfEmployee, rating, totalCapital);
     }
@@ -17,10 +15,10 @@ public class EUBank extends Bank {
     @Override
     public int getLimitOfWithdrawal() {
         if(getCurrency() == Currency.USD) {
-            return 2000;
+            return 1000;
         }
         if(getCurrency() == Currency.EUR) {
-            return 2200;
+            return 1200;
         }
         return 0;
     }
@@ -28,16 +26,22 @@ public class EUBank extends Bank {
     @Override
     public int getLimitOfFunding() {
         if(getCurrency() == Currency.USD) {
-            return 20000;
+            return 10000;
         }
         if(getCurrency() == Currency.EUR) {
-           return 10000;
+            System.out.println("No limit");
         }
         return 0;
     }
 
     @Override
     public int getMonthlyRate() {
+        if(getCurrency() == Currency.USD) {
+            return 0;
+        }
+        if(getCurrency() == Currency.EUR) {
+            return 1;
+        }
         return 0;
     }
 
@@ -53,12 +57,13 @@ public class EUBank extends Bank {
         }
         if(getCurrency() == Currency.EUR) {
             if(summ < 1000 && summ > 0){
-                return (int)(summ * 0.02);
+                return (int)(summ * 0.06);
             }
             if(summ > 1000 && summ > 0) {
-                return (int) (summ * 0.04);
+                return (int) (summ * 0.08);
             }
         }
+        System.out.println("Сумма не может быть отрицательной");
         return 0;
     }
 }

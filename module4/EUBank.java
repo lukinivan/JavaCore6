@@ -1,26 +1,24 @@
-package HomeWork.module4.task1;
-
-import HomeWork.module4.task2.Currency;
+package HomeWork.module4;
 
 /*
-* ChinaBank
+* EUBank
 * module 4, task 1.1
 * Lukin Ivan
  */
 
-public class ChinaBank extends Bank {
-    public ChinaBank(long id, String bankCountry, Currency currency, int numberOfEmployees,
-                     double avrSalaryOfEmployee, long rating, long totalCapital) {
+public class EUBank extends Bank {
+    public EUBank(long id, String bankCountry, Currency currency, int numberOfEmployees,
+                  double avrSalaryOfEmployee, long rating, long totalCapital) {
         super(id, bankCountry, currency, numberOfEmployees, avrSalaryOfEmployee, rating, totalCapital);
     }
 
     @Override
     public int getLimitOfWithdrawal() {
         if(getCurrency() == Currency.USD) {
-            return 100;
+            return 2000;
         }
         if(getCurrency() == Currency.EUR) {
-            return 150;
+            return 2200;
         }
         return 0;
     }
@@ -28,16 +26,22 @@ public class ChinaBank extends Bank {
     @Override
     public int getLimitOfFunding() {
         if(getCurrency() == Currency.USD) {
-            return 5000;
+            return 20000;
         }
         if(getCurrency() == Currency.EUR) {
-            return 10000;
+           return 10000;
         }
         return 0;
     }
 
     @Override
     public int getMonthlyRate() {
+        if(getCurrency() == Currency.USD) {
+            return 1;
+        }
+        if(getCurrency() == Currency.EUR) {
+            return 2;
+        }
         return 0;
     }
 
@@ -45,20 +49,21 @@ public class ChinaBank extends Bank {
     public int getCommission(int summ) {
         if(getCurrency() == Currency.USD) {
             if(summ < 1000 && summ > 0){
-                return (int)(summ * 0.03);
+                return (int)(summ * 0.05);
             }
             if(summ > 1000 && summ > 0) {
-                return (int) (summ * 0.05);
+                return (int) (summ * 0.07);
             }
         }
         if(getCurrency() == Currency.EUR) {
             if(summ < 1000 && summ > 0){
-                return (int)(summ * 0.1);
+                return (int)(summ * 0.02);
             }
             if(summ > 1000 && summ > 0) {
-                return (int) (summ * 0.11);
+                return (int) (summ * 0.04);
             }
         }
+        System.out.println("Сумма не может быть отрицательной");
         return 0;
     }
 }
