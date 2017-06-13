@@ -3,7 +3,7 @@ package HomeWork.module6.task1;
 import java.util.ArrayList;
 import java.util.List;
 
-class ArraysUtils {
+final class ArraysUtils {
 
     static int sumInt(int arr[]) {
         int _arr = 0;
